@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+   
+   
+    <title>Sum using Drop Down</title>
+    <style>
+
+        .main{
+
+            text-align: center;
+            margin-top: 15rem;
+            
+        }
+        #txt1,#txt2{
+            width: 10rem;
+            height: 2rem;
+            
+        }
+        #opr{
+            height: 2.5rem;
+        }
+
+        #show{
+    text-align: center;
+    font-size: 22rem;
+    font-weight: 800;
+    font-family: cursive;
+    color: white;
+        }
+        #items{
+            font-size: 25px;
+
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+  $("select").change(function(){
+    var num1=parseInt( $("#txt1").val());
+   var num2=parseInt($("#txt2").val());
+
+if((num1 ==null)||(num2==null)){
+   $("#show").text("Insert both NO")
+}
+   else if($("select").val()=='+'){
+        
+   var sum=num1 + num2;
+   
+    $("#show").text(sum)
+
+    }
+   else if($("select").val()=='-'){
+       
+   var min=num1 - num2;
+   
+    $("#show").text(min)
+
+    }
+    else if($("select").val()=='/'){
+       
+   var div=num1 / num2;
+  
+    $("#show").text(div)
+
+    }
+    else if($("select").val()=='x'){
+       
+   var mult=num1 * num2;
+   
+    $("#show").text(mult)
+
+    }
+    else{
+        alert("Please select from Dropdown")
+    }
+  });
+});
+    </script>
+</head>
+<body style="background: rgb(84, 84, 231);">
+    <div class="main">
+        <h2 style="font-family: cursive; color:white">Add,Subtract,Divide,Multiplay</h2>
+        <input type="text"  id="txt1" >
+        <input type="text"  id="txt2" >
+        <select name="operation" id="opr"> 
+            <option >Select one</option>
+    <option value="+" id="items">+</option>
+    <option value="-" id="items">-</option>
+    <option value="/" id="items">/</option>
+    <option value="x" id="items">x</option>
+    
+    
+        </select>
+
+
+    </div>
+    <div style="text-align: center;" >
+        <label id="show"></label>
+
+    </div>
+   
+</body>
+</html>
