@@ -1,0 +1,30 @@
+body {
+  background: rgb(84, 84, 231);
+}
+.main {
+  text-align: center;
+  margin-top: 5rem;
+}
+#txt1,
+#txt2 {
+  width: 10rem;
+  height: 2rem;
+}
+h2 {
+  font-family: cursive;
+  color: white;
+}
+#opr {
+  height: 2.5rem;
+}
+
+#show {
+  text-align: center;
+  font-size: 20rem;
+  font-weight: 800;
+  font-family: cursive;
+  color: white;
+}
+#items {
+  font-size: 25px;
+}
