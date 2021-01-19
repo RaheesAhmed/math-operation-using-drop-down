@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $("select").change(function () {
-    var num1 = parseInt($("#txt1").val());
+    var num1 = parseInt($("#txt1").val()); //convert the string into number(parseInt)
     var num2 = parseInt($("#txt2").val());
 
     if (num1 == null || num2 == null) {
